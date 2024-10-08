@@ -6,6 +6,7 @@ import "./globals.css";
 import Header from "@/components/customComp/header";
 import Footer from "@/components/customComp/footer";
 import { ClerkProvider } from "@clerk/nextjs";
+import { shadesOfPurple } from "@clerk/themes";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -29,7 +30,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        baseTheme: shadesOfPurple,
+      }}
+    >
       <html lang="en" suppressHydrationWarning>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
