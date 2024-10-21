@@ -7,9 +7,10 @@ import {
 } from "@/components/ui/carousel";
 import Image from "next/image";
 import CompaniesData from "@/utils/data/companies.json";
+import { FC } from "react";
 type Props = {};
 
-const CarouselSection = (props: Props) => {
+const CarouselSection: FC<Props> = ({}) => {
   return (
     <Carousel
       plugins={[
